@@ -1,0 +1,5 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# run scraper at 03:00 every Monday (1) and Thursday (4)
+0 3 * * 1,4 root cd /app && /usr/local/bin/python main.py >> /var/log/cron.log 2>&1
